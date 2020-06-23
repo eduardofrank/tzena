@@ -1,0 +1,110 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:tzena/Resources/Public/Scss/Theme/theme.scss
+        tzena_layout = EXT:tzena/Resources/Public/Css/tzena.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        tzena_scripts = EXT:tzena/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+
+
+################################
+#### ADDED BY EDUARDO FRANK ####
+################################
+config.admPanel = 0
+config.contentObjectExceptionHandler = 0
+
+#Header inclusion of favicons
+page.headerData.2020 = FLUIDTEMPLATE
+page.headerData.2020 {
+	file = EXT:tzena/Resources/Private/Templates/Favicons.html
+ 	extbase.controllerExtensionName = tzena
+}
+
+
+#Handling of high res screens
+lib.contentElement.settings.responsiveimages.variants {
+    default {
+        breakpoint = 1200
+        width = 1100
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    large {
+        breakpoint = 992
+        width = 920
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    medium {
+        breakpoint = 768
+        width = 680
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    small {
+        breakpoint = 576
+        width = 500
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }    
+    extrasmall {
+        breakpoint = unset
+        width = 374
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+}
