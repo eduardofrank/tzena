@@ -1,3 +1,7 @@
+h1, h1 a, h2, h2 a, h3, h3 a {
+    font-family: 'Archivo Black', sans-serif;
+}
+
 .navbar-mainnavigation {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
     padding: 0;
@@ -10,6 +14,31 @@
 .carousel-item-type-call_to_action .carousel-box {
     max-width: 70%;
 }
+}
+
+/************************/
+/**** Thank you page ****/
+/************************/
+#p7 .main-section {
+    display:flex;
+    align-items:center;
+    flex:1;
+    justify-content:center;
+}
+
+/* Thank you page breadcrumb */
+#p7 .breadcrumb-section {
+    display: none;
+}
+
+/******************/
+/**** 404 page ****/
+/******************/
+#p3 .main-section {
+    display:flex;
+    align-items:center;
+    flex:1;
+    justify-content:center;
 }
 
 /********************/
@@ -27,4 +56,9 @@ body, .body-bg {
 
 #page-footer {
     margin-top: auto;
+}
+
+.footer-section-meta {
+    color: #ffffff;
+    background-color: #4a4a4a;
 }

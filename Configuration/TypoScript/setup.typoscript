@@ -8,6 +8,9 @@
 #### PAGE ####
 ##############
 page {
+    includeCSSLibs {
+        googlewebfont = https://fonts.googleapis.com/css?family=Archivo+Black&display=swap
+    }
     includeCSS {
         theme = EXT:tzena/Resources/Public/Scss/Theme/theme.scss
         tzena_layout = EXT:tzena/Resources/Public/Css/tzena.css
@@ -36,6 +39,10 @@ page {
 ################################
 config.admPanel = 0
 config.contentObjectExceptionHandler = 0
+
+#### FORM CONFIGURATION ###
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:tzena/Configuration/Yaml/FormSetup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:tzena/Configuration/Yaml/FormSetup.yaml
 
 #Header inclusion of favicons
 page.headerData.2020 = FLUIDTEMPLATE
